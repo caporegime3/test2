@@ -1,0 +1,33 @@
+#!/bin/bash
+
+DD=`date +%Y%m%d`
+echo $DD
+
+while [ true ]
+do
+echo "Enter a key please: Choices are (Y/y or N/n)"
+
+read KBI
+
+echo $KBI
+
+if [ $KBI == "y" ]; then
+ touch exam-ops-$DD.1
+ touch exam-ops-$DD.2
+ touch exam-ops-$DD.3
+ touch exam-ops-$DD.4
+ touch exam-ops-$DD.5
+elif [ $KBI == "Y" ]; then
+ touch exam-ops-$DD.1
+ touch exam-ops-$DD.2
+ touch exam-ops.$DD.3
+ touch exam-ops.$DD.4
+ touch exam-ops.$DD.5
+elif [ $KBI == "n" ]; then
+ echo `cal`
+elif [ $KBI == "N" ]; then
+ echo `cal`
+else
+ echo "Sorry this is not the required input. Nothing is generated."
+fi
+done
